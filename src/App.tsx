@@ -1,14 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ProductList from './screens/product-list';
+import Header from './components/header';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header />
+      <ProductList />
+      {/*   <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload. Cool test
         </p>
         <a
           className="App-link"
@@ -18,7 +22,7 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-      </header>
+  </header> */}
     </div>
   );
 }

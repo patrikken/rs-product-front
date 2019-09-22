@@ -1,0 +1,23 @@
+.ProdList {
+    background-color: #282c34;
+    display: flex;
+    font-size: calc(10px + 2vmin);
+    color: white;  
+    flex-direction: column;
+    padding-top: 20pt;
+    padding-bottom: 20pt;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .ListHolder{
+   /*  min-height: 100vh;  */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 90%; 
+    margin-bottom: 20pt;
+    flex: 1
+  }
+   
+  
