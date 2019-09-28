@@ -12,10 +12,14 @@ class ProductList extends Component<{}, { products: Array<Product> }>{
     }
 
     componentDidMount() {
-        ProductsAPI.getProducts().then(resp => {
-            this.setState({
-                products: resp
-            })
+        ProductsAPI.getProductsStrapi().then(({ data, error }) => {
+            if (!error) {
+                this.setState({
+                    products: data
+                })
+            } else {
+                throw 'error when loading data'
+            }
         })
     }
 
@@ -25,6 +29,7 @@ class ProductList extends Component<{}, { products: Array<Product> }>{
             <div className="ProdList">
                 <div className="ListHolder">
                     {products.map((item) => {
+                        console.log(item);
                         return <ProductItem key={item.id} product={item} />
                     })}
                 </div>

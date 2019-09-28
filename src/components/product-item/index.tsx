@@ -20,6 +20,13 @@ const ProductItem: React.FC<Props> = ({ product }) => {
                         {product.name}
                         {visible && <div>
                             {product.description}
+                            <p>----------</p>
+                            <div>
+                                {product.producer.name}
+                            </div>
+                            <div>
+                                {product.producer.address}
+                            </div>
                         </div>}
                     </div>
                 </div>
